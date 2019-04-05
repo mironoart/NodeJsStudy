@@ -9,11 +9,15 @@ const port = 3000
 const app = express()
 
 const dishRouter = require('./routes/dishRouter')
+const promotionsRouter = require('./routes/promotionRouter')
+const leadersRouter = require('./routes/leaderRouter')
 
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 
 app.use('/dishes', dishRouter)
+app.use('/promotions', promotionsRouter)
+app.use('/leaders', leadersRouter)
 app.use(express.static(__dirname + '/public'))
 
 app.use((req, res, next) => {
