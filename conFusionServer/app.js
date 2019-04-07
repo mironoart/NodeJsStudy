@@ -12,8 +12,6 @@ var promoRouter = require('./routes/promoRouter')
 
 const mongoose = require('mongoose')
 
-const Dishes = require('./models/dishes')
-
 const url = 'mongodb://localhost:27017/confusion'
 const connect = mongoose.connect(url, { useNewUrlParser: true })
 
